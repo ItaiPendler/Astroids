@@ -57,6 +57,15 @@ function setup() {
   }, false);
 
   slowMotionModeCheckBox = document.getElementById('slowModeCheckBox');
+  window.addEventListener(
+    "keydown",
+    (event) => {
+      if(event.key === 's'){
+        slowMotionModeCheckBox.click();
+      }
+    },
+    true,
+  );
   slowMotionModeCheckBox.addEventListener('change', function (event) {
     if (slowMotionModeCheckBox.checked) {
       //we are in slow motion mode, so we set the speed to slow motion speed.
