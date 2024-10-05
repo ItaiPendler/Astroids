@@ -230,10 +230,13 @@ function draw(){
 
   if (canvas.getContext) {
     var context = canvas.getContext('2d');
+    
+    context.canvas.width  = window.innerWidth;
+    context.canvas.height = window.innerHeight;
 
 
     //drawing space
-    context.fillRect(0, 0, 1000, 700);
+    context.fillRect(0, 0, window.innerWidth, window.innerHeight);
 
 
     //drawing the astroids
